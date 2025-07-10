@@ -9,7 +9,7 @@ C-Class core RTL implementation and simulation: Implement atleast two different 
 
 ##  Author  
 - Name: Divya Darshan VR & Goutham Badhrinath V
-- Submission Date: 10 July 2025  
+ 
 
 
 ---
