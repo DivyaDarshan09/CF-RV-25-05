@@ -1,30 +1,31 @@
-# 🚀 CEG Fabless RISC-V Summer Internship 2025  
-### 📡 Collaboration with Vyoma Systems & Shakti Processor Team – IIT Madras
+#  CEG Fabless RISC-V Summer Internship 2025  
+###  Collaboration with Vyoma Systems & Shakti Processor Team – IIT Madras
+### Domain : Hardware Core/Debug 
 
-## 🧠 Problem Statement  
+##  Problem Statement  
 C-Class core RTL implementation and simulation: Implement atleast two different branch predictors and evaluate using set of benchmarks given by Shakti team. Compare performance of existing gshare predictor and the new predictors. Extra credit: Tuning the predictors for higher accuracy/lower misprediction rate.
 
 ---
 
-## 👨‍💻 Author  
+##  Author  
 - Name: Divya Darshan VR & Goutham Badhrinath V
 - Submission Date: 10 July 2025  
 
 
 ---
 
-## 🎯 Objective  
+##  Objective  
 To enhance branch prediction efficiency in the Shakti C-Class Bluespec Core by:
 
-- ✅ Tuning the existing Bimodal predictor
-- ✅ Designing and integrating a new Tournament predictor
-- 📈 Evaluating these predictors using CoreMark benchmark results.
+- Tuning the existing Bimodal predictor
+- Designing and integrating a new Tournament predictor
+- Evaluating these predictors using CoreMark benchmark results.
 
 ---
 
-## 📅 Project Plan
+## Project Plan
 
-### 1️⃣ Study the Basics
+### Study the Basics
 - Understand branch prediction concepts.
 - Focus on the following algorithms:
   - Bimodal
@@ -34,7 +35,7 @@ To enhance branch prediction efficiency in the Shakti C-Class Bluespec Core by:
 
 ---
 
-### 2️⃣ Analyze Existing BSV Code
+### Analyze Existing BSV Code
 - Revamp bimodal_nc.bsv and bimodal_c.bsv.
 - Understand integration with the pipeline:
   - Where predictions are made
@@ -43,7 +44,7 @@ To enhance branch prediction efficiency in the Shakti C-Class Bluespec Core by:
 
 ---
 
-### 3️⃣ Design and Implement Tournament Predictor
+### Design and Implement Tournament Predictor
 - Create new module: Tournament.bsv
   - Internally use tuned bimodal and existing GShare predictors
 - Use PredictorSelect.bsv:
@@ -52,7 +53,7 @@ To enhance branch prediction efficiency in the Shakti C-Class Bluespec Core by:
 
 ---
 
-### 4️⃣ Simulate and Benchmark
+### Simulate and Benchmark
 - Run basic RISC-V assembly tests
 - Benchmark with CoreMark
 - Analyze performance using:
@@ -63,7 +64,7 @@ To enhance branch prediction efficiency in the Shakti C-Class Bluespec Core by:
 
 ---
 
-## 📂 File Overview
+## File Overview
 
 | File / Module          | Description |
 |------------------------|-------------|
@@ -76,27 +77,27 @@ To enhance branch prediction efficiency in the Shakti C-Class Bluespec Core by:
 
 ---
 
-## 📊 Benchmarking and Evaluation
+##  Benchmarking and Evaluation
 
-### 🔍 Metrics Collected:
-- ✅ Branch Prediction Accuracy
-- ❌ Misprediction Rate
-- ⚙ Instructions Per Cycle (IPC)
-- ⏱ Total Cycle Count
+###  Metrics Collected:
+-  Branch Prediction Accuracy
+-  Misprediction Rate
+-  Instructions Per Cycle (IPC)
+-  Total Cycle Count
 
 ---
 
-### 🆚 Comparisons Made:
+###  Comparisons Made:
 - Tuned Bimodal Predictor
 - Newly implemented Tournament Predictor
 
 ---
 
-## 📑 Planned Deliverables
-- ✅ Updated .bsv files with implementation
-- 📘 Design explanation and working principle
-- 📊 Benchmark report with CoreMark results
-- 🔗 Project repository with all sources and results
+## Planned Documentation Works
+-  Updated .bsv files with implementation
+-  Design explanation and working principle
+-  Benchmark report with CoreMark results
+-  Project repository with all sources and results
 
 ---
 
