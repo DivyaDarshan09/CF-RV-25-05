@@ -7,9 +7,9 @@ C-Class core RTL implementation and simulation: Implement atleast two different 
 ---
 
 ## 👨‍💻 Author  
-Name: Divya Darshan VR & Goutham Badhrinath V
-Submission Date: 10 July 2025  
-Repository:
+- Name: Divya Darshan VR & Goutham Badhrinath V
+- Submission Date: 10 July 2025  
+
 
 ---
 
@@ -100,8 +100,4 @@ To enhance branch prediction efficiency in the Shakti C-Class Bluespec Core by:
 
 ---
 
-> 💡 This project contributes toward improving processor performance by enhancing speculative execution through better branch prediction in RISC-V-based Shakti cores.
 
----
-
-📌 For any doubts or contributions, raise an issue or pull request on this repository.
