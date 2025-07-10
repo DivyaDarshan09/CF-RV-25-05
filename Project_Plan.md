@@ -7,7 +7,7 @@ C-Class core RTL implementation and simulation: Implement atleast two different 
 
 ---
 
-##  Author  
+##  Team Members 
 - Name: Divya Darshan VR & Goutham Badhrinath V
  
 
