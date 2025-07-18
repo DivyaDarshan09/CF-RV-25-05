@@ -1,15 +1,22 @@
 package tournament_bpu;
 
+typedef struct {
+  Bit#(`vaddr) va;
+  Bool discard;
+  Bit#(2) prediction0;
+  Bit#(`vaddr) target_pc;
+} NextPC deriving (Bits, Eq, FShow);
+
 module mktournament_bpu(Ifc_bpu);
 
-  // Submodules: GShare and Bimodal
+  // GShare and Bimodal module instantiation
   Ifc_bpu bimodal <- mkbimodal_c;
   Ifc_bpu gshare  <- mkgshare_fa;
 
   // Meta predictor table (2-bit saturating counters), initialized to 2 (weakly prefer GShare)
   Vector#(TournSize, Reg#(Bit#(2))) meta_table <- replicateM(mkReg(2));
 
-  // Store the latest request and predictions
+  // Store the latest prediction request 
   Reg#(PredictionRequest) saved_req <- mkRegU;
   Reg#(Bit#(2)) gshare_pred <- mkReg(1);
   Reg#(Bit#(2)) bimodal_pred <- mkReg(1);
@@ -21,7 +28,7 @@ module mktournament_bpu(Ifc_bpu);
     bimodal.prediction_req(req);
   endmethod
 
-  // Choose prediction using meta-table
+  // Choosing prediction using meta-table
   interface next_pc = interface Get;
     method ActionValue#(NextPC) get();
       let g = await gshare.next_pc.get;
@@ -39,7 +46,8 @@ module mktournament_bpu(Ifc_bpu);
       return NextPC {
         va: saved_req.pc,
         discard: False,
-        prediction0: final_pred
+        prediction0: final_pred,
+        target_pc: final_target
       };
     endmethod
   endinterface
@@ -50,14 +58,14 @@ module mktournament_bpu(Ifc_bpu);
     return (meta_table[idx] >= 2) ? gshare.predicted_pc : bimodal.predicted_pc;
   endmethod
 
-  //Train meta predictor and forward to both predictors 
+  // Train meta predictor and forward to both predictors 
   method Action train_bpu(Training_data td);
     let idx = truncate(td.pc >> 2);
     let g_pred = (gshare_pred > 1);
     let b_pred = (bimodal_pred > 1);
     let actual = (td.state > 1);
 
-    // Meta predictor update: only if gshare and bimodal differ
+    // Meta predictor table update:
     if (g_pred != b_pred) begin
       if (g_pred == actual)
         meta_table[idx] <= (meta_table[idx] == 3) ? 3 : meta_table[idx] + 1;
