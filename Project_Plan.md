@@ -81,7 +81,7 @@ To enhance branch prediction efficiency in the Shakti C-Class Bluespec Core by:
 
 ###  Metrics Collected:
 -  Branch Prediction Accuracy
--  Misprediction Rate
+-  Misprediction per kilo instructions (Mpki)
 -  Instructions Per Cycle (IPC)
 -  Total Cycle Count
 
