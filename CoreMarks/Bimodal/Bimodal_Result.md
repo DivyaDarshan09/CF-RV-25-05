@@ -1,11 +1,12 @@
 ## CoreMarks Result
 
 ## App_log
-![alt text](image.png)
+![alt text](Bimodal_applog.png)
 
 
+ 
 ## RTL.dump
-![alt text](image-1.png)
+![alt text](Bimodal_perf_counters.png)
 
 ## Performance Counters
 ```
