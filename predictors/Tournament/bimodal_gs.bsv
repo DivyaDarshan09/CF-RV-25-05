@@ -62,17 +62,17 @@ package bimodal_gs;
 
   interface Ifc_bpu;
     /*doc : method : receive the request of new pc and return the next pc in case of hit. */
-    method ActionValue#(PredictionResponse) mav_prediction_response (PredictionRequest r);
+    method ActionValue#(PredictionResponse) mav_prediction_response_b (PredictionRequest r);
 
     /*doc : method : method to train the BTB and BHT tables based on the evaluation from execute
     stage*/
-	  method Action ma_train_bpu (Training_data td);
+	  method Action ma_train_bpu_b (Training_data td);
 
     // This is exclusive for GShare so noAction
-    method Action ma_mispredict (Tuple2#(Bool, Bit#(`histlen)) g);
+    method Action ma_mispredict_b (Tuple2#(Bool, Bit#(`histlen)) g);
 
     /*doc : method : This method captures if the bpu is enabled through csr or not*/
-    method Action ma_bpu_enable (Bool e);
+    method Action ma_bpu_enable_b (Bool e);
   endinterface
 
 `ifdef bpu_noinline
@@ -190,7 +190,7 @@ package bimodal_gs;
     Ret type ci, it would immediately pick up the RAS top which would be correct. Thus, an empty
     function would also benefit from this mechanism.
     */
-    method ActionValue#(PredictionResponse) mav_prediction_response (PredictionRequest r)
+    method ActionValue#(PredictionResponse) mav_prediction_response_b (PredictionRequest r)
                                                          `ifdef ifence if(!rg_initialize) `endif ;
       `logLevel( bpu, 0, $format("[%2d] Bimodal BPU : Received Request: ",hartid, fshow(r)))
     `ifdef ifence
@@ -300,7 +300,7 @@ package bimodal_gs;
     would lead to duplicates and thus would require zapping them - another simultaneous look-up. It
     seems the current approach does to seem close on required frequencies.
     */
-    method Action ma_train_bpu (Training_data d) if(wr_bpu_enable
+    method Action ma_train_bpu_b (Training_data d) if(wr_bpu_enable
                                                           `ifdef ifence && !rg_initialize `endif );
       `logLevel( bpu, 4, $format("[%2d]Bimodal BPU : Received Training: ",hartid,fshow(d)))
 
@@ -334,11 +334,11 @@ package bimodal_gs;
     endmethod
 
     
-    method Action ma_mispredict (Tuple2#(Bool, Bit#(`histlen)) g);
+    method Action ma_mispredict_b (Tuple2#(Bool, Bit#(`histlen)) g);
     noAction;
     endmethod
 
-    method Action ma_bpu_enable (Bool e);
+    method Action ma_bpu_enable_b (Bool e);
       wr_bpu_enable <= e;
     endmethod
 
