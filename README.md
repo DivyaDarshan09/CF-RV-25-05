@@ -1,5 +1,5 @@
-# CF-RV-25-05: 
-## Tournament Branch Predictor for Shakti C-Class
+# CF-RV-25-05
+## Implementation of 2 Branch Predictor (Tournament and Bimodal) for Shakti C-Class
 
 This project was developed as part of the **CEG Fabless RISC-V Internship**, a collaborative initiative between **College of Engineering, Guindy (CEG)**, **Vyoma Systems**, and the **Shakti Processor Team (IIT Madras)**.
 
