@@ -46,19 +46,14 @@ Use runtime behavior to improve accuracy.
 
 ---
 
-##  Domain - RTL Core/Debug Team
-
----
-
 ##  Objectives
 
 - [x] Implement a **Tournament Branch Predictor** using Gshare and Bimodal logic.
 - [x] Revamp the existing **Bimodal Predictor** in the Shakti C-Class.
-- [x] Integrate and test the enhanced predictor within the processor pipeline.
-
+- [x] Simulation of C Class core with the newly integrated **Branch predictors** and run coremarks
 ---
 
-##  Technologies & Tools
+##  Tools Used
 
 - **Bluespec Verilog**
 - **Shakti C-Class Core**
