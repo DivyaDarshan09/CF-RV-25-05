@@ -1,8 +1,10 @@
-# CF-RV-25-05: Tournament Branch Predictor for Shakti C-Class
+# CF-RV-25-05: 
+## Tournament Branch Predictor for Shakti C-Class
 
 This project was developed as part of the **CEG Fabless RISC-V Internship**, a collaborative initiative between **College of Engineering, Guindy (CEG)**, **Vyoma Systems**, and the **Shakti Processor Team (IIT Madras)**.
 
 ---
+##  Domain - RTL Core/Debug Team
 
 ## Project Overview
 
@@ -83,8 +85,4 @@ College of Engineering, Guindy
 Anna University, Chennai
 
 ---
-
-## 📄 License
-
-This project is open-sourced under the MIT License.
 
