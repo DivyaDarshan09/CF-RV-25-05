@@ -1,4 +1,4 @@
-package tournament_bpu;
+package tournament_initial;
 
 typedef struct {
   Bit#(`vaddr) va;
