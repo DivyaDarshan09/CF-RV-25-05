@@ -8,8 +8,6 @@ This project was carried out as part of the **CEG Fabless RISC-V Internship 2025
 
 ## 🙌 Special Thanks
 
-### 🎯 Internship Facilitator
-
 - **Mr. Sivakumar Anandhan**  
   *Manager – Power Architecture, NVIDIA*  
   Email: sivakumaranandhan22@gmail.com  
@@ -20,7 +18,7 @@ We extend our heartfelt thanks to Mr. Sivakumar anna for initiating and enabling
 
 ## 🧑‍🏫 Mentors from IIT Madras
 
-- **Ms. Nitya Ranganathan**
+- **Mrs. Nitya Ranganathan**
 - **Mr. Sriram**
 
 Their technical guidance and constant mentoring were crucial throughout our project.
@@ -35,4 +33,5 @@ ECE 3rd Year, College of Engineering, Guindy
 Anna University, Chennai
 
 ---
+
 

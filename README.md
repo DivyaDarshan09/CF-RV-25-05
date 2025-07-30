@@ -5,7 +5,7 @@ This project was developed as part of the **CEG Fabless RISC-V Internship**, a c
 
 ---
 ##  Domain - RTL Core/Debug Team
-
+---
 ## Project Overview
 
 Our primary objective was to **design and integrate a tournament branch predictor** into the **Shakti C-Class processor** and to **revamp the existing bimodal predictor**. This enhancement improves the accuracy of branch prediction in RISC-V cores by dynamically choosing between two predictors: **Gshare** and **Bimodal**.
