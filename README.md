@@ -86,3 +86,10 @@ Anna University, Chennai
 
 ---
 
+## Acknowledgement
+This project was made possible by the support and guidance from:
+- **CEG Fabless Internship Program**
+- **Vyoma Systems**
+- **Shakti Processor Team, IIT Madras**
+
+👉 [Click here to view the full credits.](CREDITS.md)
